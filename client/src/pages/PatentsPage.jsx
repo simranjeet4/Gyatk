@@ -22,7 +22,7 @@ export default function PatentsPage() {
 
   return (
     <div className="patents-page-root">
-      {/* 1. Hero Banner with Dark Circuit Pattern & Bottom-Right Patent Seal Badge */}
+      {/* 1. Hero Banner with Dark Circuit Pattern & Far Bottom-Right Patent Seal Badge */}
       <section className="patents-hero">
         <div className="patents-hero-overlay"></div>
         <div className="container patents-hero-container">
@@ -41,15 +41,15 @@ export default function PatentsPage() {
               />
             </div>
           </div>
+        </div>
 
-          {/* Bottom Right Badge Image matching screenshot exactly */}
-          <div className="patents-gold-seal-badge">
-            <img 
-              src="/images/patent-seal-badge.jpg" 
-              alt="An Invention Originating from India Was Patented Globally in 49 Countries" 
-              className="patents-seal-badge-img"
-            />
-          </div>
+        {/* Floating Gold Seal Badge placed on far bottom-right corner outside container */}
+        <div className="patents-gold-seal-badge">
+          <img 
+            src="/images/patent-seal-badge.jpg" 
+            alt="An Invention Originating from India Was Patented Globally in 49 Countries" 
+            className="patents-seal-badge-img"
+          />
         </div>
       </section>
 

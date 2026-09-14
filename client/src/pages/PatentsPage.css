@@ -12,17 +12,17 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 50px 0 0 0;
-  min-height: 440px;
+  padding: 80px 0 60px 0;
+  min-height: 640px; /* Min height set to 640px as requested */
   display: flex;
-  align-items: stretch;
+  align-items: center;
   overflow: hidden;
 }
 
 .patents-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(0, 30, 61, 0.4) 0%, rgba(0, 15, 35, 0.8) 100%);
+  background: radial-gradient(circle at 30% 50%, rgba(0, 30, 61, 0.35) 0%, rgba(0, 15, 35, 0.8) 100%);
   z-index: 1;
 }
 
@@ -31,26 +31,24 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  min-height: 390px;
 }
 
 .patents-hero-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
   width: 100%;
-  padding-top: 10px;
 }
 
 .patents-hero-text {
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .patents-hero-title {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.25;
@@ -61,26 +59,26 @@
 
 .patents-hero-media {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .patents-hero-shaft-img {
   width: 100%;
-  max-width: 540px;
+  max-width: 580px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.65));
 }
 
-/* Floating Gold Seal Badge on Bottom Right */
+/* Floating Gold Seal Badge on Far Bottom-Right Corner (Outside Container) */
 .patents-gold-seal-badge {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 10;
   background: #ffffff;
-  box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: -6px -6px 25px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +87,7 @@
 }
 
 .patents-seal-badge-img {
-  height: 165px;
+  height: 200px; /* Proportioned height for 640px hero section */
   width: auto;
   display: block;
   object-fit: contain;
@@ -420,16 +418,21 @@
 
 /* Responsive queries */
 @media (max-width: 992px) {
+  .patents-hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
   .patents-hero-content-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 32px;
   }
 
   .patents-gold-seal-badge {
     position: relative;
     bottom: 0;
     right: 0;
-    margin-top: 24px;
+    margin-top: 32px;
     align-self: flex-end;
   }
 
@@ -459,6 +462,6 @@
   }
 
   .patents-seal-badge-img {
-    height: 120px;
+    height: 130px;
   }
 }
