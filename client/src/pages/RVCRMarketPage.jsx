@@ -294,7 +294,7 @@ export default function RVCRMarketPage() {
           <div className="power-gen-2col">
             <div className="power-gen-media">
               <img 
-                src="/images/solution.png" 
+                src="/images/mce-5.jpg" 
                 alt="RVCR Power Generator Engine Cutaway" 
                 className="power-gen-img"
               />
