@@ -139,23 +139,14 @@ export default function StrategicAdvantagePage() {
         </div>
       </section>
 
-      {/* 7. Pre-emptive product preparedness Banner Section */}
+      {/* 7. Pre-emptive product preparedness Full-Width Background Banner Section */}
       <section className="strategic-section preemptive-section">
-        <div className="container">
-          <div className="preemptive-card-row">
-            <div className="preemptive-media-col">
-              <img 
-                src="/images/Pre-emitive-product.jpg" 
-                alt="Pre-emptive product preparedness CAD diagram" 
-                className="preemptive-cad-img"
-              />
-            </div>
-            <div className="preemptive-content-col">
-              <h3 className="preemptive-title">Pre-emptive product preparedness</h3>
-              <p className="preemptive-text">
-                The core-competency allowing to create newer products and plan its schedule launch is a key strength. The leverage you gain from matching product planning and launching with strategic market considerations, is key to retain leadership position. By the time competitor catches up the market landscape is altered with newer product functionalities. RVCR Deep tech is in a unique position to let attain Pre-emptive product preparedness and launch capability.
-              </p>
-            </div>
+        <div className="container preemptive-container">
+          <div className="preemptive-content-wrap">
+            <h3 className="preemptive-title">Pre-emptive product preparedness</h3>
+            <p className="preemptive-text">
+              The core-competency allowing to create newer products and plan its schedule launch is a key strength. The leverage you gain from matching product planning and launching with strategic market considerations, is key to retain leadership position. By the time competitor catches up the market landscape is altered with newer product functionalities. RVCR Deep tech is in a unique position to let attain Pre-emptive product preparedness and launch capability.
+            </p>
           </div>
         </div>
       </section>

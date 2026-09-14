@@ -232,26 +232,36 @@
   margin: 0;
 }
 
-/* 7. Pre-emptive Section */
+/* 7. Pre-emptive Section (Pre-emitive-product.jpg as background image) */
 .preemptive-section {
-  background: linear-gradient(135deg, #002244 0%, #003461 100%);
-  padding: 60px 0;
-  color: #ffffff;
-}
-
-.preemptive-card-row {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  position: relative;
+  background-color: #001630;
+  background-image: url('/images/Pre-emitive-product.jpg');
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 85px 0;
+  min-height: 420px;
+  display: flex;
   align-items: center;
 }
 
-.preemptive-cad-img {
+.preemptive-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.preemptive-content-wrap {
+  max-width: 600px;
+  background: rgba(0, 26, 54, 0.88);
+  padding: 44px 48px;
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .preemptive-title {
@@ -301,10 +311,17 @@
   .strategic-overview-container,
   .strategic-background-container,
   .advantages-2col-grid,
-  .comp-item-row,
-  .preemptive-card-row {
+  .comp-item-row {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .preemptive-container {
+    justify-content: center;
+  }
+
+  .preemptive-content-wrap {
+    max-width: 100%;
   }
 
   .strategic-hero-title {
