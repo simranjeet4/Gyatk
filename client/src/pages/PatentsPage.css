@@ -1,0 +1,236 @@
+/* ==========================================================================
+   PATENTS PAGE - GYATK AUTHENTIC THEME
+   ========================================================================== */
+
+.patents-page .section {
+  padding: 70px 0;
+}
+
+.patents-page .section-dark {
+  background-color: #FFFFFF;
+}
+
+.patents-page .section-dark-elevated {
+  background-color: #F8FAFC;
+}
+
+.patents-page .section-subtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #96337B;
+  margin-bottom: 10px;
+}
+
+.patents-page .section-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 16px;
+}
+
+.patents-page .section-description {
+  font-size: 15px;
+  color: #54595F;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+.ipr-commitments {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.commitment-item {
+  display: flex;
+  gap: 1rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.commit-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #96337B;
+  color: #FFFFFF;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.commitment-item strong {
+  display: block;
+  color: #003461;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.commitment-item p {
+  font-size: 0.9rem;
+  color: #64748B;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Factors Grid */
+.factor-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.factor-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(150, 51, 123, 0.1);
+  color: #96337B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.factor-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.65rem;
+}
+
+.factor-desc {
+  font-size: 0.9rem;
+  color: #54595F;
+  line-height: 1.6;
+}
+
+/* Steps Grid */
+.step-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.step-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #96337B;
+  margin-bottom: 0.85rem;
+}
+
+.step-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #003461;
+  margin-bottom: 0.65rem;
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: #64748B;
+  line-height: 1.55;
+}
+
+.value-conclusion-box {
+  margin-top: 3.5rem;
+  background: #003461;
+  border-radius: 8px;
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+}
+
+.value-conclusion-box p {
+  font-size: 1.1rem;
+  color: #E2E8F0;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Certificates Grid */
+.cert-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.cert-card:hover {
+  border-color: #00A9EA;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cert-icon {
+  color: #003461;
+}
+
+.cert-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #96337B;
+  background: rgba(150, 51, 123, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.cert-country {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.cert-authority {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-bottom: 1.5rem;
+}
+
+.cert-download-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #E2E8F0;
+  font-size: 0.85rem;
+  color: #003461;
+  font-weight: 600;
+}
