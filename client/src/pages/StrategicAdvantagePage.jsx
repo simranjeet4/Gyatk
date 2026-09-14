@@ -47,29 +47,11 @@ export default function StrategicAdvantagePage() {
             </p>
           </div>
           <div className="background-graphics-col">
-            <div className="co2-badges-flex">
-              {/* Badge 1: CO2 EMITTED */}
-              <div className="co2-badge-card card-emitted">
-                <div className="co2-cloud-icon grey-cloud">
-                  <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
-                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
-                  </svg>
-                </div>
-                <span className="badge-card-title">CO2 EMITTED</span>
-                <div className="badge-card-sub">Industrial Smoke & Emissions</div>
-              </div>
-
-              {/* Badge 2: ZERO CO2 */}
-              <div className="co2-badge-card card-zero">
-                <div className="co2-cloud-icon green-cloud">
-                  <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
-                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
-                  </svg>
-                </div>
-                <span className="badge-card-title green-title">ZERO CO2</span>
-                <div className="badge-card-sub">Clean Green Energy</div>
-              </div>
-            </div>
+            <img 
+              src="/images/carbon-transition.jpg" 
+              alt="Carbon Transition & Emissions Comparison" 
+              className="background-transition-img"
+            />
           </div>
         </div>
       </section>
@@ -132,8 +114,8 @@ export default function StrategicAdvantagePage() {
           <div className="comp-item-row">
             <div className="comp-item-media">
               <img 
-                src="/images/view-bioengineering-advance-with-human-hands.jpg" 
-                alt="Split Earth Bioengineering" 
+                src="/images/influence.jpg" 
+                alt="Influence the nature competition" 
                 className="comp-item-img"
               />
             </div>
@@ -163,8 +145,8 @@ export default function StrategicAdvantagePage() {
           <div className="preemptive-card-row">
             <div className="preemptive-media-col">
               <img 
-                src="/images/sec2.png" 
-                alt="RVCR CAD Cross Section Engineering" 
+                src="/images/Pre-emitive-product.jpg" 
+                alt="Pre-emptive product preparedness CAD diagram" 
                 className="preemptive-cad-img"
               />
             </div>

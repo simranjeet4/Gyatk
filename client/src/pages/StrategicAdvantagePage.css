@@ -100,7 +100,7 @@
 
 .strategic-background-container {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 48px;
 }
@@ -117,61 +117,14 @@
   color: #0f172a;
 }
 
-/* CO2 Badge Cards */
-.co2-badges-flex {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.co2-badge-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 24px 20px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  flex: 1;
-  max-width: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.co2-cloud-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-
-.grey-cloud {
-  background: #f1f5f9;
-  color: #64748b;
-}
-
-.green-cloud {
-  background: #dcfce7;
-  color: #16a34a;
-}
-
-.badge-card-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #334155;
-  margin-bottom: 4px;
-}
-
-.green-title {
-  color: #16a34a;
-}
-
-.badge-card-sub {
-  font-size: 0.75rem;
-  color: #64748b;
+.background-transition-img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
 /* 4. Blue Callout Banner */
@@ -247,7 +200,7 @@
 
 .comp-item-row {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 420px 1fr;
   gap: 40px;
   align-items: center;
   margin-bottom: 48px;
@@ -281,8 +234,9 @@
 
 /* 7. Pre-emptive Section */
 .preemptive-section {
-  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  background: linear-gradient(135deg, #002244 0%, #003461 100%);
   padding: 60px 0;
+  color: #ffffff;
 }
 
 .preemptive-card-row {
@@ -297,20 +251,20 @@
   height: auto;
   border-radius: 8px;
   object-fit: contain;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .preemptive-title {
   font-size: 1.85rem;
   font-weight: 700;
-  color: #003461;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .preemptive-text {
   font-size: 1.025rem;
   line-height: 1.75;
-  color: #1e293b;
+  color: #e2e8f0;
   margin: 0;
 }
 
