@@ -43,7 +43,7 @@ export default function RVCRMarketPage() {
           <div className="overview-2col-row">
             <div className="overview-media-col">
               <img 
-                src="/images/GYATKrvcr-1 (1).jpg" 
+                src="/images/gif-1.gif" 
                 alt="RVCR Engine Core" 
                 className="overview-engine-img"
               />
