@@ -16,54 +16,71 @@
   margin-bottom: 20px;
 }
 
-/* 1. Hero Section */
+/* 1. Hero Section matching reference screenshot */
 .market-hero-section {
-  background-color: #001e3d;
-  color: #ffffff;
-  padding: 60px 0;
+  position: relative;
+  background-color: #002244;
+  width: 100%;
   min-height: 380px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
-.market-hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.market-hero-container {
+  display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hero-left-content {
+  flex: 1;
+  max-width: 520px;
+  padding: 40px 0;
+  z-index: 2;
 }
 
 .hero-tag {
   color: #e11d48;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: capitalize;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .hero-main-title {
   font-size: 2.75rem;
   font-weight: 800;
   color: #ffffff;
-  line-height: 1.25;
-  margin-bottom: 16px;
+  line-height: 1.18;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
 }
 
 .hero-desc {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.025rem;
+  line-height: 1.65;
   color: #cbd5e1;
   margin: 0;
 }
 
-.hero-collage-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.hero-right-banner {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.hero-angled-img {
+  max-height: 380px;
+  width: auto;
   object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  object-position: right center;
 }
 
 /* 2. Overview Section */
@@ -398,7 +415,20 @@
 
 /* Responsive queries */
 @media (max-width: 992px) {
-  .market-hero-grid,
+  .market-hero-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .hero-right-banner {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-angled-img {
+    max-height: 260px;
+  }
+
   .overview-2col-row,
   .newer-markets-2col,
   .graph-2col-row,

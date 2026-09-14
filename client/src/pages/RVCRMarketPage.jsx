@@ -14,21 +14,24 @@ export default function RVCRMarketPage() {
 
   return (
     <div className="rvcr-market-page-root">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section matching reference screenshot exactly */}
       <section className="market-hero-section">
-        <div className="container market-hero-grid">
-          <div className="hero-left-text">
+        <div className="market-hero-container">
+          <div className="hero-left-content">
             <span className="hero-tag">RVCR Market</span>
-            <h1 className="hero-main-title">RVCR Technology Ecosystem</h1>
+            <h1 className="hero-main-title">
+              RVCR Technology<br />Ecosystem
+            </h1>
             <p className="hero-desc">
               The unprecedented climate challenge needs is beyond the scope of conventional innovations RVCR enables OEM’s with newer long term strategies for Zero Carbon Technologies.
             </p>
           </div>
-          <div className="hero-right-collage">
+          <div className="hero-right-banner">
             <img 
-              src="/images/why-rvcr-bg.jpg" 
-              alt="ENERGY TRANSPORT UTILITIES" 
-              className="hero-collage-img"
+              src="/images/rvcr-market.png" 
+              alt="ENERGY TRANSPORT UTILITIES Ecosystem" 
+              className="hero-angled-img"
+              onError={(e) => { e.target.src = '/images/rvcr-market-hero-exact.png'; }}
             />
           </div>
         </div>
