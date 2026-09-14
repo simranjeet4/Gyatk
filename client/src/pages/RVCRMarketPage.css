@@ -444,3 +444,104 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Enhanced Section Tags */
+.section-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.green-tag {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.blue-tag {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+/* Media Card Frame for crisp image presentation */
+.media-card-frame {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.media-card-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* 7. Green Engines Section */
+.green-engines-section {
+  background-color: #ffffff;
+  padding: 70px 0;
+}
+
+.green-engines-2col {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 48px;
+}
+
+.green-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.green-fuel-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 8. Pumps Section */
+.pumps-section {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 70px 0;
+}
+
+.pumps-2col {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.pumps-hydraulic-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.pumps-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}

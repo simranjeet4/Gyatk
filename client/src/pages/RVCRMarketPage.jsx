@@ -226,6 +226,7 @@ export default function RVCRMarketPage() {
         <div className="container">
           <div className="green-engines-2col">
             <div className="green-engines-text-col">
+              <span className="section-tag green-tag">Green Transition</span>
               <h2 className="section-title">RVCR Green fuel Engines market</h2>
               <p className="green-p">
                 The Auto sector market alone in US alone is estimated at more than 250 billion dollars a year and considering the primemovers as 20 to 35 % of the vehicle cost, the RVCR market implications can be conjectured on. GYATK’s Market extends globally which amount to several multiples of the US market.
@@ -242,7 +243,7 @@ export default function RVCRMarketPage() {
             </div>
             <div className="green-engines-media-col">
               <img 
-                src="/images/no-carbon2.webp" 
+                src="/images/26252312_7168169.jpg" 
                 alt="Green Fuel & Zero Carbon Illustration" 
                 className="green-fuel-img"
               />
@@ -263,6 +264,7 @@ export default function RVCRMarketPage() {
               />
             </div>
             <div className="pumps-text-col">
+              <span className="section-tag blue-tag">Industrial Applications</span>
               <h2 className="section-title">RVCR Pumps compressors and motors market</h2>
               <p className="pumps-p">
                 The RVCR applications in products other than engines are far more massive. Variable delivery feature of fluid handling machines makes an ideal for compressors and the air conditioning market, which is a beyond doubt an RVCR domain market, in itself speaks of the market volume. The compressor market is massive which includes high end and hazardous chemical, petrochemical applications and not to mention industrial gases and biomedical gases.
