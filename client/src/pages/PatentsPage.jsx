@@ -1,24 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ShieldCheck, FileText, CheckCircle2, ArrowRight, Download, Globe2, Briefcase } from 'lucide-react';
+﻿import React from 'react';
+import { Check, FileText, Download, Award, ShieldCheck, Globe, ArrowRight } from 'lucide-react';
 import './PatentsPage.css';
 
 export default function PatentsPage() {
-  const iprFactors = [
-    { title: "Geography", desc: "Territorial exclusivity tailored to client manufacturing and distribution markets." },
-    { title: "Application", desc: "Customized for automotive propulsion, gensets, fluid handling, or marine." },
-    { title: "Product", desc: "Specific displacement volumes, power ratings, and packaging envelopes." },
-    { title: "Segment", desc: "Commercial heavy duty, passenger automotive, distributed microgrids, or agriculture." },
-    { title: "Market", desc: "OEM direct supply, aftermarket retrofits, or tier-1 licensed sub-assemblies." }
-  ];
-
-  const valueRealizationSteps = [
-    { step: "01", title: "High-Level Business Case", desc: "Development of market fit, preliminary ROI projections, and target vehicle/engine specifications." },
-    { step: "02", title: "Initial Due Diligence", desc: "Verification of legal registrations, patent claims, and background IPR clean title." },
-    { step: "03", title: "Suitability Assessment", desc: "Preliminary mechanical engineering review of client's current powertrain or machine platforms." },
-    { step: "04", title: "Capability Mapping", desc: "Evaluating client's precision manufacturing, tooling, and supply chain readiness for RVCR integration." }
-  ];
-
   const patentCerts = [
     { country: "United States", filename: "USA-Granted-Patent-pages-12.pdf", year: "USPTO" },
     { country: "India", filename: "20031224-Indian-CERTIFICATE.pdf", year: "Indian Patent Office" },
@@ -28,162 +12,217 @@ export default function PatentsPage() {
     { country: "Singapore", filename: "singapore-patent.pdf", year: "IPOS" }
   ];
 
+  const applicableSectors = [
+    "Automotive",
+    "Agriculture",
+    "Defense",
+    "Aerospace",
+    "Industrial"
+  ];
+
   return (
-    <div className="patents-page">
-      {/* Hero */}
-      <section className="page-hero-banner">
-        <div className="container">
-          <span className="badge-pill">Intellectual Property Portfolio</span>
-          <h1 className="page-hero-title">IPR & Technology Licensing</h1>
-          <p className="page-hero-subtitle">
-            RVCR is a seed technology applicable across diverse product categories and sectors. We provide high-tech solutions backed by commercial exclusivity through secured global patents.
-          </p>
-        </div>
-      </section>
+    <div className="patents-page-root">
+      {/* 1. Hero Banner with Dark Circuit Pattern & Floating Gold Seal Badge */}
+      <section className="patents-hero">
+        <div className="patents-hero-overlay"></div>
+        <div className="container patents-hero-container">
+          <div className="patents-hero-text">
+            <h1 className="patents-hero-title">
+              We provide high tech solutions with IPR - intellectual property rights
+            </h1>
+          </div>
+          
+          <div className="patents-hero-media">
+            <img 
+              src="/images/shaft.png" 
+              alt="RVCR Kinematic Core Mechanism" 
+              className="patents-hero-shaft-img"
+            />
+          </div>
 
-      {/* Overview */}
-      <section className="section section-dark">
-        <div className="container">
-          <div className="feature-row">
-            <div className="feature-col-text">
-              <span className="section-subtitle">Flexible IP Framework</span>
-              <h2 className="section-title">Background & Foreground IPR Architecture</h2>
-              <p className="feature-lead">
-                The base background IPR is segregated to flexibly accommodate each client's specific interest area. It is further topped up with foreground IP while developing products for specific segments.
-              </p>
-              <p className="section-description">
-                The first IPR license agreement was executed by GYATK in <strong>2007</strong>. Over two decades of commercial licensing experience ensures robust contractual protection, time-bound deliverables, and strategic risk mitigation for partner OEMs.
-              </p>
-
-              <div className="ipr-commitments">
-                <div className="commitment-item">
-                  <span className="commit-num">1</span>
-                  <div>
-                    <strong>Product Development Project Plan:</strong>
-                    <p>Time-bound execution commitment, complete project planning, engineering milestones, and consultancy.</p>
-                  </div>
-                </div>
-
-                <div className="commitment-item">
-                  <span className="commit-num">2</span>
-                  <div>
-                    <strong>Technological Operations Management:</strong>
-                    <p>High-end engineering excellence, D&D operations, and process management to ensure flawless hardware execution.</p>
-                  </div>
-                </div>
-              </div>
+          {/* Floating White Badge on Bottom Right */}
+          <div className="patents-gold-seal-badge">
+            <div className="seal-icon-wrap">
+              <Award size={36} className="gold-seal-icon" />
             </div>
-
-            <div className="feature-col-media">
-              <div className="media-card-wrap">
-                <img 
-                  src="/images/shaft.png" 
-                  alt="RVCR Kinematic Core Mechanism" 
-                  className="feature-main-image"
-                  onError={(e) => { e.target.src = '/images/patents-dashboard2-1-1.jpg'; }}
-                />
-                <div className="media-floating-badge">
-                  <ShieldCheck size={22} className="badge-icon" />
-                  <div>
-                    <strong>50+ Countries Protected</strong>
-                    <span>Exclusive Global Rights</span>
-                  </div>
-                </div>
-              </div>
+            <div className="seal-text-wrap">
+              <span className="seal-bold-text">An Invention Originating from India Has Patented Globally</span>
+              <span className="seal-country-highlight">In 49 Countries</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Specificity Factors */}
-      <section className="section section-dark-elevated">
+      {/* 2. IPR & Technology Licensing Section */}
+      <section className="patents-section patents-licensing-section">
         <div className="container">
-          <div className="section-header">
-            <span className="section-subtitle">Tailored Licensing</span>
-            <h2 className="section-title">IP Rights Specific To Your Business</h2>
-            <p className="section-description">
-              Our licensing agreements are modularly constructed across five key dimensions.
-            </p>
-          </div>
-
-          <div className="grid-3 ipr-factors-grid">
-            {iprFactors.map((factor) => (
-              <div key={factor.title} className="factor-card card-dark">
-                <div className="factor-icon-box"><Briefcase size={20} /></div>
-                <h3 className="factor-title">{factor.title}</h3>
-                <p className="factor-desc">{factor.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Value Realization Program */}
-      <section className="section section-dark">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-subtitle">Structured Process</span>
-            <h2 className="section-title">IPR Value Realization Program</h2>
-            <p className="section-description">
-              Formulated as an engagement program of planned interactive sessions under formal MOU and Confidentiality Agreement (CA).
-            </p>
-          </div>
-
-          <div className="grid-4 steps-grid">
-            {valueRealizationSteps.map((s) => (
-              <div key={s.step} className="step-card card-dark">
-                <span className="step-badge">{s.step}</span>
-                <h3 className="step-title">{s.title}</h3>
-                <p className="step-desc">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="value-conclusion-box">
+          <h2 className="patents-section-title">IPR & Technology Licensing</h2>
+          
+          <div className="patents-narrative-text">
             <p>
-              By the conclusion of this structured program, parties formulate a comprehensive techno-commercial dossier and are fully prepared for the formal <strong>IP & Technology License Agreement</strong> and pilot product development.
+              RVCR is a seed technology applicable across diverse product categories and sectors. The base background IPR is segregated to flexibly accommodate client's interest area. It is further topped up with foreground IP while developing products for specific segments. Over two decades of commercial licensing experience ensures robust contractual protection, time-bound deliverables, and strategic risk mitigation for partner OEMs.
             </p>
-            <Link to="/contact-us" className="btn btn-primary">
-              <span>Inquire for Technology Licensing</span>
-              <ArrowRight size={16} />
-            </Link>
+            
+            <p className="patents-applicable-intro">The IPR is applicable for :</p>
+            
+            <ul className="patents-check-list">
+              {applicableSectors.map((sector) => (
+                <li key={sector}>
+                  <div className="check-icon-wrapper">
+                    <Check className="check-icon" size={18} />
+                  </div>
+                  <span>{sector}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 3. Global World Map Reach Graphic */}
+          <div className="patents-map-container">
+            <img 
+              src="/images/map-world.png" 
+              alt="Global Patent Reach Map Across 49 Countries" 
+              className="patents-map-img"
+            />
+          </div>
+
+          {/* 4. Highlight Banner Box */}
+          <div className="patents-highlight-banner">
+            <h3 className="highlight-banner-title">
+              THE 1ST IPR LICENSE AGREEMENT WAS EXECUTED BY GYATK IN 2007.
+            </h3>
+            <p className="highlight-banner-sub">
+              We built an open innovation network with leading OEMs.
+            </p>
+          </div>
+
+          {/* 5. Two Numbered Cards Section */}
+          <div className="patents-numbered-section">
+            <p className="patents-intro-p">
+              GYATK R&D is committed to augment 'innovation management' and product development techniques for continually enhancing the commercial potency of RVCR technology system for a completely self-sustainable 'Zero Carbon' industrial ecosystem.
+            </p>
+
+            <div className="patents-grid-2col">
+              {/* Card 1 */}
+              <div className="numbered-card">
+                <span className="card-big-number">1</span>
+                <p className="card-body-text">
+                  A company wide holistic R&D program of Gyatk in India which was framed in concert with IC2 Institute (UT Austin) Global Commercialization Program. Under this program we derived key strategic initiatives for creating scalable revenue models suitable for global markets.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="numbered-card">
+                <span className="card-big-number">2</span>
+                <p className="card-body-text">
+                  The International Open Innovation Framework created by Gyatk enabled multi-country collaboration for adopting green technology products. This strategic advantage allowed fast deployment of RVCR technology across diverse market segments and geographical locations.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Patent Certificates Download Showcase */}
-      <section className="section section-dark-elevated">
+      {/* 6. Section 2: IPR Value Realization */}
+      <section className="patents-section patents-realization-section">
         <div className="container">
-          <div className="section-header">
-            <span className="section-subtitle">Verified Grants</span>
-            <h2 className="section-title">Granted Patent Documentation Excerpts</h2>
-            <p className="section-description">
-              Sample granted patent certificates from premier national patent offices.
+          <h2 className="patents-section-title">IPR Value Realization</h2>
+          
+          <div className="patents-realization-intro">
+            <p>
+              The business model of GYATK is structured around IP value realization through licensing agreements. GYATK owns the background IP and licenses both IPR and technology to OEMs. This value-realization program is executed over structured interactive sessions.
             </p>
           </div>
 
-          <div className="grid-3 certs-grid">
-            {patentCerts.map((cert) => (
-              <a 
-                key={cert.country} 
-                href={`/images/${cert.filename}`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="cert-card card-dark"
-              >
-                <div className="cert-header">
-                  <FileText size={24} className="cert-icon" />
-                  <span className="cert-badge">Official Grant</span>
+          {/* Flowchart Diagram Box */}
+          <div className="patents-flowchart-container">
+            <div className="flowchart-left-tree">
+              {/* Root Box */}
+              <div className="flowchart-node root-node">
+                <span>GYATK IP Rights & Licensing</span>
+              </div>
+              
+              <div className="flowchart-connector-line"></div>
+              
+              {/* Branch Nodes */}
+              <div className="flowchart-branches">
+                <div className="flowchart-node branch-red">
+                  <span>Segment Specific IP Rights</span>
                 </div>
-                <h4 className="cert-country">{cert.country}</h4>
-                <span className="cert-authority">{cert.year}</span>
-                <div className="cert-download-link">
-                  <span>View Grant Document (PDF)</span>
-                  <Download size={15} />
+                <div className="flowchart-node branch-cyan">
+                  <span>Market Specific IP Rights</span>
                 </div>
-              </a>
-            ))}
+              </div>
+            </div>
+
+            {/* Flowchart Right Features List */}
+            <div className="flowchart-right-features">
+              <ul className="patents-check-list">
+                <li>
+                  <div className="check-icon-wrapper">
+                    <Check className="check-icon" size={18} />
+                  </div>
+                  <span>Highly lucrative revenue sharing model</span>
+                </li>
+                <li>
+                  <div className="check-icon-wrapper">
+                    <Check className="check-icon" size={18} />
+                  </div>
+                  <span>Secured exclusive rights across 49 countries</span>
+                </li>
+                <li>
+                  <div className="check-icon-wrapper">
+                    <Check className="check-icon" size={18} />
+                  </div>
+                  <span>Agility for non-disruptive integration in existing supply chains</span>
+                </li>
+                <li>
+                  <div className="check-icon-wrapper">
+                    <Check className="check-icon" size={18} />
+                  </div>
+                  <span>Thermal expansion & dynamic compression ratio for Net Zero roadmap</span>
+                </li>
+              </ul>
+            </div>
           </div>
+
+          {/* Concluding Narrative */}
+          <div className="patents-realization-conclude">
+            <p>
+              In part this program's outcome is a preliminary assessment dossier, which evaluates client's specific interest area and business fit. The dossier provides a roadmap for technology development, validation, and commercialization.
+            </p>
+            <p>
+              Dossiers also include recommendations for the scope of licensing, specific product specifications, and licensing terms. This enables both GYATK and the client to proceed with confidence into the formal License Agreement and joint product realization.
+            </p>
+          </div>
+
+          {/* Patent Documentation Downloads */}
+          <div className="patents-downloads-block">
+            <h3 className="downloads-block-title">Official Granted Patent Certificates</h3>
+            <div className="grid-3 certs-grid">
+              {patentCerts.map((cert) => (
+                <a 
+                  key={cert.country} 
+                  href={`/images/${cert.filename}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="cert-card"
+                >
+                  <div className="cert-header">
+                    <FileText size={22} className="cert-icon" />
+                    <span className="cert-badge">Verified Grant</span>
+                  </div>
+                  <h4 className="cert-country">{cert.country}</h4>
+                  <span className="cert-authority">{cert.year}</span>
+                  <div className="cert-download-link">
+                    <span>View Grant PDF</span>
+                    <Download size={14} />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
     </div>
