@@ -1,5 +1,5 @@
-﻿import React from 'react';
-import { Check, FileText, Download, Award, ShieldCheck, Globe, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Check, FileText, Download } from 'lucide-react';
 import './PatentsPage.css';
 
 export default function PatentsPage() {
@@ -22,33 +22,33 @@ export default function PatentsPage() {
 
   return (
     <div className="patents-page-root">
-      {/* 1. Hero Banner with Dark Circuit Pattern & Floating Gold Seal Badge */}
+      {/* 1. Hero Banner with Dark Circuit Pattern & Bottom-Right Patent Seal Badge */}
       <section className="patents-hero">
         <div className="patents-hero-overlay"></div>
         <div className="container patents-hero-container">
-          <div className="patents-hero-text">
-            <h1 className="patents-hero-title">
-              We provide high tech solutions with IPR - intellectual property rights
-            </h1>
-          </div>
-          
-          <div className="patents-hero-media">
-            <img 
-              src="/images/shaft.png" 
-              alt="RVCR Kinematic Core Mechanism" 
-              className="patents-hero-shaft-img"
-            />
+          <div className="patents-hero-content-grid">
+            <div className="patents-hero-text">
+              <h1 className="patents-hero-title">
+                We provide high tech solutions with IPR - intellectual property rights
+              </h1>
+            </div>
+            
+            <div className="patents-hero-media">
+              <img 
+                src="/images/shaft.png" 
+                alt="RVCR Kinematic Core Mechanism" 
+                className="patents-hero-shaft-img"
+              />
+            </div>
           </div>
 
-          {/* Floating White Badge on Bottom Right */}
+          {/* Bottom Right Badge Image matching screenshot exactly */}
           <div className="patents-gold-seal-badge">
-            <div className="seal-icon-wrap">
-              <Award size={36} className="gold-seal-icon" />
-            </div>
-            <div className="seal-text-wrap">
-              <span className="seal-bold-text">An Invention Originating from India Has Patented Globally</span>
-              <span className="seal-country-highlight">In 49 Countries</span>
-            </div>
+            <img 
+              src="/images/patent-seal-badge.jpg" 
+              alt="An Invention Originating from India Was Patented Globally in 49 Countries" 
+              className="patents-seal-badge-img"
+            />
           </div>
         </div>
       </section>
