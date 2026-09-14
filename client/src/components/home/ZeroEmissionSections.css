@@ -1,6 +1,5 @@
 ﻿/* ==========================================================================
-   ZERO EMISSION / ABOUT US HOMEPAGE SECTIONS CSS
-   Focused, static layout with no keyframe animation (Animation stays in GYAT homepage hero only)
+   ZERO EMISSION / ABOUT US HOMEPAGE SECTIONS CSS (100% MATCH TO gyatk.com/zero-emission-technology/)
    ========================================================================== */
 
 /* 1. Hero Banner */
@@ -69,7 +68,7 @@
   align-items: center;
 }
 
-/* Static, Focused Stage (No Keyframe Animations) */
+/* Hero Orbit Stage */
 .ze-hero-orbit-stage {
   position: relative;
   width: 360px;
@@ -100,10 +99,9 @@
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.25));
 }
 
-/* Static Orbit Spheres (Focused Content) */
+/* Orbiting Spheres & Keyframes */
 .ze-orbit-ball {
   position: absolute;
-  z-index: 6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,34 +115,139 @@
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
-.ze-orbit-text {
-  font-family: var(--font-gyat);
-  font-size: 11px;
-  font-weight: 600;
-  color: #FFFFFF;
-  margin-bottom: 2px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+.ze-orbit-ball.mving1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: zeOving 12s linear infinite;
 }
 
-.ze-orbit-ball.mving1 {
-  top: 10px;
-  left: 20px;
+@keyframes zeOving {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
 }
 
 .ze-orbit-ball.drive {
-  bottom: 20px;
-  right: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: 12s zeEne ease-in-out -4s infinite;
+  opacity: 0;
+}
+
+@keyframes zeEne {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
 }
 
 .ze-orbit-ball.power {
-  top: 40px;
-  right: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: 12s -8s zePow ease-in-out infinite;
+  opacity: 0;
 }
 
-/* 2. Target Markets Grid */
-.ze-target-markets-section {
+@keyframes zePow {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+/* 2. Creating Newer Markets */
+.ze-markets-section {
   background-color: #FFFFFF;
   padding: 60px 0;
+}
+
+.ze-markets-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .ze-title-navy {
@@ -153,41 +256,15 @@
   font-weight: 300;
   color: #003461;
   line-height: 1.25;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-.ze-markets-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.ze-market-card {
-  background-color: #F8FAFC;
-  border-radius: 8px;
-  padding: 24px;
-  border: 1px solid #E2E8F0;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.ze-market-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 52, 97, 0.08);
-}
-
-.ze-market-title {
+.ze-markets-text p {
   font-family: var(--font-gyat);
-  font-size: 20px;
-  font-weight: 500;
-  color: #003461;
-  margin-bottom: 12px;
-}
-
-.ze-market-desc {
-  font-family: var(--font-gyat);
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
   color: #475569;
+  margin-bottom: 16px;
 }
 
 /* 3. Team & Leadership */
@@ -268,7 +345,7 @@
   margin-top: 3px;
 }
 
-/* 4. Checkerboard Grid */
+/* 4. Checkerboard Grid (3 Rows x 2 Cols matching gyatk.com) */
 .ze-checkerboard-section {
   width: 100%;
   background-color: #FFFFFF;
@@ -329,6 +406,31 @@
   color: #FFFFFF;
   line-height: 1.2;
   margin: 0 0 16px 0;
+}
+
+.ze-cb-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ze-cb-bullet-item {
+  position: relative;
+  padding-left: 20px;
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.ze-cb-bullet-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFFFFF;
+  font-size: 18px;
 }
 
 .ze-cb-p {

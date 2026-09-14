@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Check } from 'lucide-react';
 import './ZeroEmissionSections.css';
 
@@ -22,7 +22,7 @@ export default function ZeroEmissionLayout() {
     "Clarity in engineering fundamentals, knowledge of product development and manufacture.",
     "Insight in Market Dynamics; Cost Drivers and Analytical abilities for assessment of possible commercial acceptance of such products in future market space.",
     "Our ability to foresee a new technology system capability and its strategic packaging for segment specific needs.",
-    "The ability to plan milestone-based Technology development’, ‘Product Realization’, ‘Validation’ and ‘Commercialization’.",
+    "The ability to plan milestone-based Technology development, 'Product Realization', 'Validation' and 'Commercialization'.",
     "JV operations management for Innovation."
   ];
 
@@ -100,67 +100,66 @@ export default function ZeroEmissionLayout() {
         </div>
       </section>
 
-      {/* 3. GYATK & Team Photo (Full Width) */}
+      {/* 3. Team & Focus Areas */}
       <section className="ze-team-section-full">
-        <div className="ze-team-media-full">
+        <div className="ze-team-img-wrap">
           <img 
-            src="/images/gyatk-team.jpg" 
-            alt="GYATK Engineering Team" 
+            src="/images/gyatk-team-1.jpg" 
+            alt="GYATK Founder & Team" 
             className="ze-team-img-full"
-            loading="lazy"
           />
         </div>
         <div className="ze-team-info-full">
           <h2 className="ze-team-title">GYATK</h2>
           <p className="ze-team-desc">
-            GYATK RVCR Apparatus Pvt Limited-India (GYATK) was incorporated, by Founder, Chairman Mr. Das Ajee Kamath. Our objective is to be a globally leading commercial R&amp;D company and we are leveraging our invention of revolutionary RVCR technology for achieving it.
+            GYATK RVCR Apparatus Pvt Limited-India (GYATK) was incorporated, by Founder, Chairman Mr. Das Ajee Kamath. Our objective is to be a globally leading commercial R&D company and we are leveraging our invention of revolutionary RVCR technology for achieving it.
           </p>
           <h3 className="ze-focus-title">Our focus areas</h3>
           <ul className="ze-checklist">
-            {focusAreas.map((item, idx) => (
+            {focusAreas.map((area, idx) => (
               <li key={idx} className="ze-check-item">
-                <Check size={15} className="ze-check-icon" strokeWidth={2.5} />
-                <span>{item}</span>
+                <Check size={17} className="ze-check-icon" strokeWidth={2.5} />
+                <span>{area}</span>
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      {/* 4. Checkerboard Grid (3 Rows x 2 Cols) */}
+      {/* 4. Checkerboard Grid (Vision, Mission, Strength) */}
       <section className="ze-checkerboard-section">
-        {/* Row 1: Vision (Magenta) | Binoculars */}
+        {/* Row 1: Vision (Magenta) | Machine Engine */}
         <div className="ze-cb-row">
           <div className="ze-cb-cell-text ze-cb-vision">
             <h3 className="ze-cb-title">Vision</h3>
             <ul className="ze-cb-bullets">
               <li className="ze-cb-bullet-item">
-                To successfully commercialize technologies based on the invention of the ‘RVCR principle in energy conversion’.
+                'To successfully commercialize technologies based on the invention of the 'RVCR principle in energy conversion'.
               </li>
               <li className="ze-cb-bullet-item">
-                To enable the transport and energy Industry with RVCR technology solutions for achieving its Zero Emission goals.
+                "To enable the transport and energy Industry with RVCR technology solutions for achieving its Zero Emission goals".
               </li>
               <li className="ze-cb-bullet-item">
-                To be a global leader in industrial deep tech innovation and technology services.
+                'To be a global leader in industrial deep tech innovation and technology services.
               </li>
             </ul>
           </div>
           <div className="ze-cb-cell-img">
             <img 
-              src="/images/vission.png" 
-              alt="Vision Binoculars Sketch" 
+              src="/images/machine.png" 
+              alt="RVCR Machine Technology" 
               className="ze-cb-sketch"
               loading="lazy"
             />
           </div>
         </div>
 
-        {/* Row 2: Target | Mission (Navy) */}
+        {/* Row 2: Shaft Engine | Mission (Dark Blue) */}
         <div className="ze-cb-row">
           <div className="ze-cb-cell-img">
             <img 
-              src="/images/mission.png" 
-              alt="Mission Target Sketch" 
+              src="/images/shaft.png" 
+              alt="RVCR Shaft Engine Mechanism" 
               className="ze-cb-sketch"
               loading="lazy"
             />
@@ -168,7 +167,7 @@ export default function ZeroEmissionLayout() {
           <div className="ze-cb-cell-text ze-cb-mission">
             <h3 className="ze-cb-title">Mission</h3>
             <p className="ze-cb-p">
-              We at gyatk committed to augment ‘innovation management’ and product development techniques’ for continually enhancing the commercial potency of RVCR technology system for a completely self-sustainable ‘Zero Carbon’ industrial ecosystem.
+              We at gyatk committed to augment 'innovation management' and product development techniques' for continually enhancing the commercial potency of RVCR technology system for a completely self-sustainable 'Zero Carbon' industrial ecosystem.
             </p>
           </div>
         </div>
@@ -178,7 +177,7 @@ export default function ZeroEmissionLayout() {
           <div className="ze-cb-cell-text ze-cb-strength">
             <h3 className="ze-cb-title">Our Strength</h3>
             <p className="ze-cb-p">
-              At GYATK, we have successfully built-up competency in forte of Prime-Mover Technology Design &amp; development for making inroads into the niche commercial R&amp;D business. GYATK owns the IPR (commercial exclusivity) through secured Patents, and licenses Both IPR and technologies to OEM’s. We have developed a robust network of Value chain partners, in contractual relationships for undertaking “Green-Field Techno-commercial project based on RVCR concepts”.
+              At GYATK, we have successfully built-up competency in forte of Prime-Mover Technology Design &amp; development for making inroads into the niche commercial R&amp;D business. GYATK owns the IPR (commercial exclusivity) through secured Patents, and licenses Both IPR and technologies to OEM's. We have developed a robust network of Value chain partners, in contractual relationships for undertaking "Green-Field Techno-commercial project based on RVCR concepts".
             </p>
           </div>
           <div className="ze-cb-cell-img">
@@ -228,7 +227,7 @@ export default function ZeroEmissionLayout() {
                 Adding a new dimension to climate change mitigation
               </h2>
               <p>
-                Industry’s continued dependence on incremental innovations in conventional technologies is unable to address 21<sup>st</sup> century needs. Now when markets are at the crossroads of further Industrial development and being environmentally responsible, GYATK is playing an enabling role in providing the global industry with an optimal sustainable progressive solution with its RVCR deep Tech innovation.
+                Industry's continued dependence on incremental innovations in conventional technologies is unable to address 21<sup>st</sup> century needs. Now when markets are at the crossroads of further Industrial development and being environmentally responsible, GYATK is playing an enabling role in providing the global industry with an optimal sustainable progressive solution with its RVCR deep Tech innovation.
               </p>
             </div>
           </div>
@@ -309,7 +308,7 @@ export default function ZeroEmissionLayout() {
             />
             <h3 className="ze-card-title">Philosophy</h3>
             <p className="ze-card-quote">
-              “Pursuit to excellence directs the course of civilization.”
+              "Pursuit to excellence directs the course of civilization."
             </p>
           </div>
 
@@ -322,7 +321,7 @@ export default function ZeroEmissionLayout() {
             />
             <h3 className="ze-card-title">The Motto</h3>
             <p className="ze-card-quote">
-              “Race to excellence does not have a finish line.”
+              "Race to excellence does not have a finish line."
             </p>
           </div>
         </div>
@@ -332,7 +331,7 @@ export default function ZeroEmissionLayout() {
       <section className="ze-tagline-section">
         <div className="container">
           <p className="ze-tagline-quote">
-            “At GYATK the path to excellence is to add newer dimensions by successfully integrating breakthrough technologies into the industry mainstream and opening newer technological channels to build upon.”
+            "At GYATK the path to excellence is to add newer dimensions by successfully integrating breakthrough technologies into the industry mainstream and opening newer technological channels to build upon."
           </p>
           <p className="ze-tagline-text">
             We design, develop, and deliver systems with the coveted VCR feature that out-perform conventional systems with newer functionalities and capabilities.
