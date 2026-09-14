@@ -107,22 +107,13 @@ export default function PropositionPage() {
               At GYATK, We provide our clients (hardware manufacturing companies/OEM’s) with services to adopt/Integrate the RVCR Technology systems into their products utilizing their existing business structure and thence provide the latest in technology to upgrade their Products to beat the best available globally. We deliver you global market leadership by cutting edge technology advantage.
             </p>
 
-            {/* Visual Formula Flow */}
-            <div className="formula-flow-diagram">
-              <div className="formula-node node-yellow">
-                <span className="node-title">Old Technology & Facilities</span>
-                <span className="node-sub">(Old Platform)</span>
-              </div>
-              <span className="formula-symbol">+</span>
-              <div className="formula-node node-teal">
-                <span className="node-title">RVCR Deep Technology</span>
-                <span className="node-sub">(New Platform)</span>
-              </div>
-              <span className="formula-symbol">=</span>
-              <div className="formula-node node-gold">
-                <span className="node-title">Coveted Technology Leadership</span>
-                <span className="node-sub">(To Deliver Global Leadership & Market Share)</span>
-              </div>
+            {/* Visual Formula Flow Diagram Image */}
+            <div className="formula-flow-container">
+              <img 
+                src="/images/home-flowchart-1024x233-1.png" 
+                alt="RVCR Technology Integration Formula Flowchart" 
+                className="formula-flowchart-img"
+              />
             </div>
           </div>
         </div>
@@ -239,8 +230,8 @@ export default function PropositionPage() {
           <div className="gyatk-reach-grid">
             <div className="reach-map-col">
               <img 
-                src="/images/map-world.png" 
-                alt="GYATK Global IPR Reach Map" 
+                src="/images/global-1.jpg" 
+                alt="GYATK Global Reach Map" 
                 className="reach-map-img"
               />
             </div>
