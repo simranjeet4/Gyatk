@@ -20,6 +20,30 @@ export default function PatentsPage() {
     "Industrial"
   ];
 
+  const mapHotspots = [
+    { id: "canada", name: "Canada", patentNo: "Patent No. - 2564973", pdf: "Canada.pdf", x: 27.2, y: 35.0 },
+    { id: "usa", name: "United States", patentNo: "Patent No. - US8297252B2", pdf: "USA-Granted-Patent-pages-12.pdf", x: 29.5, y: 48.5 },
+    { id: "mexico", name: "Mexico", patentNo: "Patent No. - MX2008001234", pdf: "mexico.pdf", x: 28.0, y: 59.2 },
+    { id: "uk", name: "United Kingdom", patentNo: "Patent No. - EP1945914", pdf: "singapore-patent.pdf", x: 49.3, y: 34.8 },
+    { id: "ukraine", name: "Ukraine", patentNo: "Patent No. - UA89124", pdf: "Ukraine.pdf", x: 56.8, y: 39.0 },
+    { id: "israel", name: "Israel", patentNo: "Patent No. - IL189412", pdf: "Israel-.pdf", x: 57.6, y: 50.2 },
+    { id: "kenya", name: "Kenya", patentNo: "Patent No. - KE512", pdf: "Kenya-patent-cert.pdf", x: 57.8, y: 65.0 },
+    { id: "south-africa", name: "South Africa", patentNo: "Patent No. - ZA200804561", pdf: "South-Africa.pdf", x: 55.4, y: 80.0 },
+    { id: "russia", name: "Russia", patentNo: "Patent No. - RU2398971", pdf: "Pat-cert-Russia.pdf", x: 71.2, y: 27.2 },
+    { id: "india", name: "India", patentNo: "Patent No. - 20031224", pdf: "20031224-Indian-CERTIFICATE.pdf", x: 67.2, y: 54.8 },
+    { id: "china", name: "China", patentNo: "Patent No. - CN101375043", pdf: "china-Granted-pat0001.pdf", x: 73.2, y: 47.0 },
+    { id: "hongkong", name: "Hong Kong", patentNo: "Patent No. - HK1123456", pdf: "hongkong-2.pdf", x: 74.8, y: 54.5 },
+    { id: "japan", name: "Japan", patentNo: "Patent No. - JP5123984", pdf: "Japan.pdf", x: 80.2, y: 45.8 },
+    { id: "korea", name: "South Korea", patentNo: "Patent No. - KR1012394", pdf: "korea.pdf", x: 77.4, y: 46.2 },
+    { id: "philippines", name: "Philippines", patentNo: "Patent No. - PH12008", pdf: "phillipines.pdf", x: 76.5, y: 59.0 },
+    { id: "vietnam", name: "Vietnam", patentNo: "Patent No. - VN1842", pdf: "vietnam-patent-cert.pdf", x: 73.5, y: 57.5 },
+    { id: "indonesia", name: "Indonesia", patentNo: "Patent No. - ID002419", pdf: "Indonesia-cert-.pdf", x: 75.6, y: 66.8 },
+    { id: "singapore", name: "Singapore", patentNo: "Patent No. - SG144219", pdf: "singapore-patent.pdf", x: 72.5, y: 64.2 },
+    { id: "srilanka", name: "Sri Lanka", patentNo: "Patent No. - LK1412", pdf: "Sri-Lanka-cert.pdf", x: 67.5, y: 60.5 },
+    { id: "australia", name: "Australia", patentNo: "Patent No. - AU2006334512", pdf: "Aus-patent-cert.pdf", x: 79.2, y: 78.5 },
+    { id: "newzealand", name: "New Zealand", patentNo: "Patent No. - NZ567123", pdf: "Newzealand-patent-cert.pdf", x: 87.2, y: 87.2 }
+  ];
+
   return (
     <div className="patents-page-root">
       {/* 1. Hero Banner with Dark Circuit Pattern & Far Bottom-Right Patent Seal Badge */}
@@ -77,13 +101,39 @@ export default function PatentsPage() {
             </ul>
           </div>
 
-          {/* 3. Global World Map Reach Graphic */}
-          <div className="patents-map-container">
-            <img 
-              src="/images/map-world.png" 
-              alt="Global Patent Reach Map Across 49 Countries" 
-              className="patents-map-img"
-            />
+          {/* 3. Interactive World Map Reach Graphic with Hover Tooltips */}
+          <div className="patents-interactive-map-section">
+            <div className="patents-map-wrapper">
+              <img 
+                src="/images/map-world-interactive.png" 
+                alt="Global Patent Reach Map Across 49 Countries" 
+                className="patents-map-base-img"
+              />
+
+              {/* Map Pin Hotspots */}
+              {mapHotspots.map((spot) => (
+                <div 
+                  key={spot.id} 
+                  className="map-pin-hotspot"
+                  style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
+                >
+                  <div className="pin-dot"></div>
+                  <div className="map-tooltip-box">
+                    <h5 className="tooltip-country-name">{spot.name}</h5>
+                    <p className="tooltip-patent-no">{spot.patentNo}</p>
+                    <a 
+                      href={`/images/${spot.pdf}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="tooltip-open-link"
+                    >
+                      Open Patent
+                    </a>
+                    <div className="tooltip-arrow"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* 4. Highlight Banner Box */}

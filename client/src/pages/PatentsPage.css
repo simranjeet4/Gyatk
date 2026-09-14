@@ -13,7 +13,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 0 60px 0;
-  min-height: 640px; /* Min height set to 640px as requested */
+  min-height: 640px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -87,7 +87,7 @@
 }
 
 .patents-seal-badge-img {
-  height: 200px; /* Proportioned height for 640px hero section */
+  height: 200px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -154,22 +154,120 @@
   stroke-width: 2.5;
 }
 
-/* Global World Map Section */
-.patents-map-container {
+/* Interactive Global World Map Section */
+.patents-interactive-map-section {
   width: 100%;
-  max-width: 960px;
-  margin: 48px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1040px;
+  margin: 48px auto 60px auto;
 }
 
-.patents-map-img {
+.patents-map-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.patents-map-base-img {
   width: 100%;
   height: auto;
+  display: block;
   object-fit: contain;
+}
+
+/* Map Pin Hotspots & Tooltips matching reference screenshot */
+.map-pin-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.pin-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #801854;
+  box-shadow: 0 0 0 3px rgba(128, 24, 84, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-pin-hotspot:hover {
+  z-index: 25;
+}
+
+.map-pin-hotspot:hover .pin-dot {
+  transform: scale(1.35);
+  background-color: #96337B;
+  box-shadow: 0 0 0 6px rgba(150, 51, 123, 0.35);
+}
+
+.map-tooltip-box {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #ffffff;
   border-radius: 8px;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.06));
+  padding: 14px 18px;
+  min-width: 170px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  pointer-events: none;
+  z-index: 30;
+  white-space: nowrap;
+}
+
+.map-pin-hotspot:hover .map-tooltip-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.tooltip-country-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  margin: 0 0 4px 0;
+}
+
+.tooltip-patent-no {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin: 0 0 10px 0;
+}
+
+.tooltip-open-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.tooltip-open-link:hover {
+  color: #003461;
+  text-decoration: underline;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 /* Highlight Banner Box */
